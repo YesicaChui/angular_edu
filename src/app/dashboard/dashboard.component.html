@@ -29,8 +29,9 @@
     <main style="padding: 20px;">
       <!-- <app-forns></app-forns> -->
       <!-- <app-users></app-users> -->
-      <button (click)="ver = !ver" >Mostrar - Ocultar</button>
-      <app-home *ngIf="ver"></app-home>
+      <!-- <button (click)="ver = !ver" >Mostrar - Ocultar</button>
+      <app-home *ngIf="ver"></app-home> -->
+      <router-outlet></router-outlet>
     </main>
   </div>
 
