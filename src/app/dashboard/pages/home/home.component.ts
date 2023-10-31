@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { User } from '../users/models';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, map, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -45,7 +45,15 @@ export class HomeComponent implements OnDestroy {
 
       })
       
-      
+      of(1,2,3,4,5)
+        .pipe(
+          tap((valor)=>console.log('valor:',valor*3)),
+          map((v1)=>v1*5)
+        ).subscribe({
+          next:(v)=>{
+            console.log("minext", v*2)
+          }
+        })
   }
   ngOnDestroy(): void {
    this.clocksSubscription.unsubscribe()
@@ -56,7 +64,7 @@ export class HomeComponent implements OnDestroy {
       setInterval(()=>{
         suscriber.next(new Date())
         
-      }, 1000)
+      }, 100000)
     })
   }
 }
