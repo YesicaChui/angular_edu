@@ -11,13 +11,17 @@ import {MatIconModule} from '@angular/material/icon';
 import { UsersModule } from './pages/users/users.module';
 import { HomeModule } from './pages/home/home.module';
 import { RouterModule } from '@angular/router';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import {MatListModule} from '@angular/material/list';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +35,7 @@ import { RouterModule } from '@angular/router';
     UsersModule,
     HomeModule,
     RouterModule,
+    MatListModule
   ],
   exports :[
     DashboardComponent

@@ -3,11 +3,7 @@
 <mat-drawer-container class="example-container" autosize>
   <!-- hijo1 menu lateral tambien conocido como sidenav -->
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+<app-sidebar></app-sidebar>
   </mat-drawer>
 <!-- hijo2 el contenido  -->
   <div class="example-sidenav-content">

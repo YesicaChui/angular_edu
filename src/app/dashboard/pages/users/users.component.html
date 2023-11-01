@@ -6,3 +6,5 @@
 <!-- {{testUser | fullname :1 }} -->
 
 <app-users-table [dataSource]="users" (deleteUser)="onDelete($event)" (editUser)="onEditUser($event)"></app-users-table>
+
+<router-outlet></router-outlet>
